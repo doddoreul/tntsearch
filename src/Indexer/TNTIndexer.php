@@ -237,6 +237,8 @@ class TNTIndexer
 
         switch ($config['driver']) {
             case 'mysql':
+                return new MySqlConnector;    
+            case 'mariadb':
                 return new MySqlConnector;
             case 'pgsql':
                 return new PostgresConnector;
